@@ -5,6 +5,9 @@
     "files": [
         "dist"
     ],
+    "publishConfig": {
+        "access": "public"
+    },
     "scripts": {
         "build": "vite build",
         "lint": "eslint .",
