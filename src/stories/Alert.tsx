@@ -112,7 +112,7 @@ type AlertContainerProps = {
 export function AlertContainer({ status }: AlertContainerProps) {
     return (
         <div
-            className="alert-container"
+            className="w-fit fixed z-50 right-4 top-4"
             style={{ display: status.isShowing ? 'block' : 'none' }}
         >
             <Alert variant={status.varient}>{status.message}</Alert>
