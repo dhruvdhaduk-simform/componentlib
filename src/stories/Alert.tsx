@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import '@/index.css';
 
 // Define the variants for the Alert component
@@ -97,4 +97,54 @@ export function Alert({
             </div>
         </div>
     );
+}
+
+export interface AlertStatus {
+    isShowing: boolean;
+    varient?: AlertVariant;
+    message: string;
+}
+
+type AlertContainerProps = {
+    status: AlertStatus;
+} & React.PropsWithChildren;
+
+export function AlertContainer({ status }: AlertContainerProps) {
+    return (
+        <div
+            className="alert-container"
+            style={{ display: status.isShowing ? 'block' : 'none' }}
+        >
+            <Alert variant={status.varient}>{status.message}</Alert>
+        </div>
+    );
+}
+
+export function useAlert() {
+    const [status, setStatus] = useState<AlertStatus>({
+        isShowing: false,
+        message: '',
+    });
+
+    const alertTimeout = useRef(-1);
+
+    const showAlert = (
+        varient: AlertVariant,
+        message: string,
+        duration?: number
+    ) => {
+        clearTimeout(alertTimeout.current);
+
+        setStatus({
+            isShowing: true,
+            varient,
+            message,
+        });
+
+        alertTimeout.current = setTimeout(() => {
+            setStatus({ isShowing: false, message: '' });
+        }, duration || 1000);
+    };
+
+    return [status, showAlert] as const;
 }
