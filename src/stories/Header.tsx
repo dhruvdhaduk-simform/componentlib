@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Button } from './Button';
 import './header.css';
+import '@/index.css';
 
 type User = {
     name: string;
@@ -44,7 +45,7 @@ export const Header = ({
                         />
                     </g>
                 </svg>
-                <h1>Acme</h1>
+                <h1 className="text-red-500">Acme</h1>
             </div>
             <div>
                 {user ? (
