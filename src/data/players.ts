@@ -1,0 +1,42 @@
+export const players = [
+    {
+        name: 'Sachin Tendulkar',
+        runs: 15921,
+        matches: 200,
+        fifties: 68,
+        centuries: 51,
+        average: 53.78,
+    },
+    {
+        name: 'Rahul Dravid',
+        runs: 13288,
+        matches: 164,
+        fifties: 63,
+        centuries: 36,
+        average: 52.31,
+    },
+    {
+        name: 'Sunil Gavaskar',
+        runs: 10122,
+        matches: 125,
+        fifties: 45,
+        centuries: 34,
+        average: 51.12,
+    },
+    {
+        name: 'Virat Kohli',
+        runs: 9230,
+        matches: 123,
+        fifties: 31,
+        centuries: 30,
+        average: 46.85,
+    },
+    {
+        name: 'VVS Laxman',
+        runs: 8781,
+        matches: 134,
+        fifties: 56,
+        centuries: 17,
+        average: 45.97,
+    },
+];
