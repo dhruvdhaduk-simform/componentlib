@@ -1,14 +1,10 @@
 .bar-chart-container {
-    --color: black;
+    --color: white;
     display: flex;
     align-items: center;
     gap: 0.5rem;
 
     margin: 7rem;
-}
-
-.dark.bar-chart-container {
-    --color: white;
 }
 
 .bar-chart-container p {

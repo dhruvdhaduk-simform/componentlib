@@ -31,8 +31,10 @@ export const Default: Story = {
                     popoverShowing={popoverShowing}
                     setPopoverShowing={setPopoverShowing}
                     style={{
-                        border: '1.5px solid black',
+                        border: '1.5px solid white',
                         borderRadius: '1rem',
+                        backgroundColor: 'black',
+                        color: 'white',
                         padding: '1rem',
                     }}
                 >

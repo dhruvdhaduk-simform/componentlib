@@ -27,11 +27,6 @@ interface BarChartProps<T> {
      * Label for Y-axis
      */
     labelY: string;
-    /**
-     * Theme of the component.
-     * @default 'light'
-     */
-    theme?: 'light' | 'dark';
 }
 
 /**
@@ -43,7 +38,6 @@ export function BarChart<T>({
     getY,
     labelX,
     labelY,
-    theme = 'light',
 }: BarChartProps<T>) {
     const chartData = data.map((item) => ({
         x: getX(item),
@@ -61,7 +55,7 @@ export function BarChart<T>({
     });
 
     return (
-        <div className={`bar-chart-container ${theme === 'dark' && 'dark'}`}>
+        <div className="bar-chart-container">
             <p>{labelY}</p>
             <div className="bar-chart">
                 {chartData.map((item) => (
