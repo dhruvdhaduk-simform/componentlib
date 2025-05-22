@@ -1,0 +1,85 @@
+.root {
+    position: relative;
+}
+
+/* Badge base */
+.badge {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    min-width: 20px;
+    padding: 0 6px;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: center;
+    box-sizing: border-box;
+    transform: translate(50%, -50%);
+    top: 0;
+    right: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Overlap styles */
+.rectangular {
+    border-radius: 2px;
+}
+
+.circular {
+    border-radius: 50%;
+}
+
+/* Variants */
+.standard {
+    background-color: var(--badge-bg, #b0b0b0);
+}
+
+.dot {
+    height: 10px;
+    min-width: 10px;
+    padding: 0;
+    border-radius: 50%;
+}
+
+/* Colors */
+.default {
+    /* --badge-bg: #b0b0b0; */
+    --badge-bg: black;
+    border: 1px solid #383838;
+    background-color: var(--badge-bg);
+}
+
+.default.dot {
+    background-color: white;
+}
+
+.primary {
+    --badge-bg: #1976d2;
+    background-color: var(--badge-bg);
+}
+
+.secondary {
+    --badge-bg: #9c27b0;
+    background-color: var(--badge-bg);
+}
+
+.error {
+    --badge-bg: #d32f2f;
+    background-color: var(--badge-bg);
+}
+
+.success {
+    --badge-bg: #2e7d32;
+    background-color: var(--badge-bg);
+}
+
+.warning {
+    --badge-bg: #ed6c02;
+    background-color: var(--badge-bg);
+}
